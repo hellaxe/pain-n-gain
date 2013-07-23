@@ -1,0 +1,26 @@
+.page-header
+  %h1
+    = t('devise.common_fields.log_in')
+
+= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {class: 'form-horizontal'}) do |f|
+  = devise_error_messages!
+
+  .control-group
+    = f.label t('devise.common_fields.email'), class: 'control-label'
+    .controls
+      = f.email_field :email, autofocus: true, placeholder: 'Eg. email@example.com'
+  .control-group
+    = f.label t('devise.common_fields.password'), class: 'control-label'
+    .controls
+      = f.password_field :password, placeholder: 'At least 8 chars...'
+
+  .control-group
+    = f.label t('devise.common_fields.remember_me'), class: 'control-label'
+    .controls
+      .switch
+        = f.check_box :remember_me
+  .control-group
+    .controls
+      = f.submit t('devise.common_fields.log_in'), class: 'btn btn-success'
+
+= render "devise/shared/links"

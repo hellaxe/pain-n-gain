@@ -1,0 +1,3 @@
+png.controller('HomeController', ($scope) ->
+
+)

@@ -1,0 +1,25 @@
+.page-header
+  %h1 Sign Up
+
+= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {class: 'form-horizontal'}) do |f|
+  = devise_error_messages!
+
+  .control-group
+    = f.label :username, class: 'control-label'
+    .controls
+      = f.text_field :username, autofocus: true, placeholder: 'Only letters, numbers and .-_@'
+  .control-group
+    = f.label :email, class: 'control-label'
+    .controls
+      = f.email_field :email, placeholder: 'Eg. email@example.com'
+  .control-group
+    = f.label :password, class: 'control-label'
+    .controls
+      = f.password_field :password, placeholder: 'At least 8 chars...'
+  .control-group
+    = f.label :password_confirmation, class: 'control-label'
+    .controls
+      = f.password_field :password_confirmation, placeholder: 'Password confirmation'
+  .control-group
+    .controls
+      = f.submit 'Sign Up', class: 'btn btn-success'

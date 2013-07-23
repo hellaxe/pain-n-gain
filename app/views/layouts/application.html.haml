@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title PainNGain
+    = stylesheet_link_tag    'application', :media => 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-inverse
+      .navbar-inner
+        .container
+          %a.brand{href: '/'}
+            Pain & Gain
+          .navbar-content.pull-right
+            %ul.nav
+              %li
+                = link_to t('devise.common_fields.sign_up'), new_user_registration_path
+              %li
+                = link_to t('devise.common_fields.log_in'), new_user_session_path
+              %li
+                = link_to t('about_us'), '/about'
+    %div.container
+      = yield

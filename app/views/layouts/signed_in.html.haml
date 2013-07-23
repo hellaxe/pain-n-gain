@@ -1,0 +1,26 @@
+!!!
+%html{'ng-app' => 'png'}
+  %head
+    %title PainNGain
+    = stylesheet_link_tag    'application', :media => 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-inverse
+      .navbar-inner
+        .container
+          %a.brand{href: '#/'}
+            Pain & Gain
+          .navbar-content.pull-right
+            %ul.nav
+              %li
+                = link_to 'Log Out', destroy_user_session_path, method: :delete
+              %li
+                = link_to 'About Us', '#/about'
+              %li
+                = link_to 'Contact', '#/contact'
+    %div.container-fluid
+      .row-fluid
+        #sidebar.span3{'png-sidebar' => ''}
+        .span9.well{'ng-view' => ''}
+          = yield
