@@ -1,0 +1,6 @@
+%h2 
+  Users
+{{message()}}
+%div{'ng-repeat' => 'u in users'}
+  %p
+    {{u.username}}
