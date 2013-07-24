@@ -5,7 +5,7 @@ png.directive('pngSidebar', () ->
     transclude: true
     scope: {}
     controller: 'SidebarController'
-    templateUrl: 'assets/sidebar/show.html.haml'
+    templateUrl: 'assets/sidebar/show.html'
     replace: false
   }
 

@@ -17,4 +17,6 @@
 //= require bootstrap-switch
 //= require angular.min
 //= require main
-//= require_tree .
+//= require angular/directives/png_sidebar
+//= require angular/controllers/sidebar_controller
+//= require angular/controllers/home_controller
