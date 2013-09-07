@@ -14,13 +14,15 @@
           .navbar-content.pull-right
             %ul.nav
               %li
-                = link_to 'Users', '#/users'
+                = link_to t('navbar.menu.users'), '#/users'
               %li
-                = link_to 'Log Out', destroy_user_session_path, method: :delete
+                = link_to t('navbar.menu.settings'), '#/settings'
               %li
-                = link_to 'About Us', '#/about'
+                = link_to t('navbar.menu.log_out'), destroy_user_session_path, method: :delete
               %li
-                = link_to 'Contact', '#/contact'
+                = link_to t('navbar.menu.about_us'), '#/about'
+              %li
+                = link_to t('navbar.menu.contacts'), '#/contact'
     %div.container-fluid
       .row-fluid
         #sidebar.span3{'png-sidebar' => ''}

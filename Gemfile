@@ -10,6 +10,8 @@ gem 'angular-rails'
 gem 'haml-rails'
 gem 'rabl'
 gem 'oj'
+gem 'i18n-js'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -22,7 +24,7 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
+gem 'http_accept_language'
 gem 'jquery-rails'
 gem 'devise'
 gem 'cancan'

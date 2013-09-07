@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130721153453) do
+ActiveRecord::Schema.define(:version => 20130729152307) do
+
+  create_table "user_settings", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "language",   :default => "en"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "username"
@@ -31,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20130721153453) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.integer  "user_settings_id"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true

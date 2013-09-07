@@ -2,5 +2,18 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 ru:
-  hello: "Welcome to Pain & Gain application"
+  hello: "Добро пожаловать на нашу страницу Pain & Gain"
   about_us: 'О нас'
+  navbar:
+    menu:
+      users: 'Пользователи'
+      settings: 'Настройки'
+      log_out: 'Выйти'
+      about_us: 'О нас'
+      contacts: 'Контакты'
+  settings:
+    username: 'Имя пользователя'
+    title: 'Настройки'
+    language: 'Язык'
+    save_button: 'Сохранить'
+    processing_button: 'Обработка...'

@@ -3,7 +3,7 @@ png.controller('SidebarController', ['$scope','$http', ($scope, $http) ->
     $scope.user = data
   $scope.count = 0
 
-  $scope.onLoading = () ->
+  $scope.onClick = () ->
     $scope.count += 1
-    console.log "hey how #{$scope.count}"
+    console.log("scope #{$scope.count}")
 ])

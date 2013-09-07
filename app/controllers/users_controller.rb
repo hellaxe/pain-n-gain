@@ -2,20 +2,27 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.includes(:user_settings)
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @users }
+      format.json { render 'api/user/users' }
     end
   end
 
   def current
     @user = current_user
     respond_to do |format|
-      format.json { render json: @user }
+      format.json { render 'api/user/user' }
     end
   end
+
+  def settings
+    respond_to do |format|
+      format.json {render 'api/user/settings', layout: false}
+    end
+  end
+
   # GET /users/1
   # GET /users/1.json
   def show
@@ -23,7 +30,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @user }
+      format.json { render 'api/user/user' }
     end
   end
 
@@ -48,7 +55,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(params[:user])
-
+    @user.create_user_settings
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -64,7 +71,6 @@ class UsersController < ApplicationController
   # PUT /users/1.json
   def update
     @user = User.find(params[:id])
-
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to @user, notice: 'User was successfully updated.' }

@@ -1,6 +1,16 @@
 PainNGain::Application.routes.draw do
-  devise_for :users
 
+  namespace :api do
+    get "user/current" => 'user#current'
+    get "user/show" => 'user#show'
+    get "user/index" => 'user#index'
+
+  end
+
+
+
+  devise_for :users
+  match 'users/settings' => 'users#settings'
   match 'users/current' => 'users#current'
   resources :users
 

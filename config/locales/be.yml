@@ -1,0 +1,19 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+be:
+  hello: "Запрашаем на нашу Pain & Gain старонку!"
+  about_us: 'Пра нас'
+  navbar:
+    menu:
+      users: 'Карыстальнікі'
+      settings: 'Налады'
+      log_out: 'Выйсці'
+      about_us: 'Пра нас'
+      contacts: 'Кантакты'
+  settings:
+    username: 'Iмя карыстальніка'
+    title: 'Налады'
+    language: 'Мова'
+    save_button: 'Захаваць'
+    processing_button: 'Апрацоўка...'

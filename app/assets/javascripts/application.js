@@ -20,6 +20,4 @@
 //= require main
 //= require angular/directives/png_sidebar
 //= require angular/services/user_service
-//= require angular/controllers/sidebar_controller
-//= require angular/controllers/home_controller
-//= require angular/controllers/user_controller
+//= require_tree ./angular/controllers/

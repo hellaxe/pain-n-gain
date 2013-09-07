@@ -1,0 +1,14 @@
+%h2
+  Settings
+.control-group
+  %label
+    = I18n.t('settings.language')
+  .controls
+    %select{'ng-model' => 'user.user_settings_attributes.language', 'ng-options' => 'lang.name as lang.definition for lang in languages'}
+      %option{'value' => ''}
+        Choose language...
+  .control-group
+    .controls
+      %button.btn-success.btn{'ng-click' => 'saveMainSettings()'}
+        = I18n.t('settings.save_button')
+  = I18n.locale

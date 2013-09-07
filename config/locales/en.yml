@@ -4,3 +4,16 @@
 en:
   hello: "Welcome to Pain & Gain application"
   about_us: 'About us'
+  navbar:
+    menu:
+      users: 'Users'
+      settings: 'Settings'
+      log_out: 'Log Out'
+      about_us: 'About Us'
+      contacts: 'Contacts'
+  settings:
+    username: 'Username'
+    title: 'Settings'
+    language: 'Language'
+    save_button: 'Save'
+    processing_button: 'Processing...'
