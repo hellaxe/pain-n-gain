@@ -2,24 +2,24 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.includes(:user_settings)
+    @users = User.all
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render 'api/user/users' }
+      format.json { render 'users/index' }
     end
   end
 
   def current
     @user = current_user
     respond_to do |format|
-      format.json { render 'api/user/user' }
+      format.json { render 'users/show' }
     end
   end
 
   def settings
     respond_to do |format|
-      format.json {render 'api/user/settings', layout: false}
+      format.json {render 'users/settings', layout: false}
     end
   end
 
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render 'api/user/user' }
+      format.json { render 'users/show' }
     end
   end
 
